@@ -429,27 +429,39 @@ h3 {
 }
 
 .team-section {
-  width: min(980px, calc(100% - 40px));
+  width: min(1120px, calc(100% - 40px));
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .profile-card {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
-  gap: 30px;
-  padding: clamp(26px, 5vw, 48px);
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 24px;
+  padding: clamp(22px, 4vw, 34px);
+  align-items: start;
 }
 
-.profile-mark {
-  display: grid;
-  place-items: center;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(190, 227, 248, 0.84), rgba(12, 112, 181, 0.18));
-  border-radius: 50%;
+.profile-card.featured {
+  grid-column: 1 / -1;
+  grid-template-columns: 230px minmax(0, 1fr);
 }
 
-.profile-mark img {
-  width: 82px;
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  box-shadow: 0 16px 34px rgba(35, 48, 76, 0.16);
+}
+
+.profile-card.featured .profile-photo {
+  aspect-ratio: 3 / 4;
 }
 
 .profile-card h3 span {
@@ -547,6 +559,22 @@ blockquote {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   overflow: hidden;
+}
+
+.assessment-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.assessment-hero img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
 }
 
 .assessment-list div {
@@ -753,7 +781,16 @@ blockquote {
   .split-band,
   .detail-section,
   .contact-section,
+  .assessment-hero,
   .profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card.featured {
     grid-template-columns: 1fr;
   }
 }
