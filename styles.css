@@ -46,19 +46,19 @@ body::before {
   top: 0;
   left: 0;
   z-index: 19;
-  width: 420px;
-  height: 420px;
+  width: 300px;
+  height: 300px;
   pointer-events: none;
   background:
-    radial-gradient(circle, rgba(12, 112, 181, 0.72) 0%, rgba(141, 197, 232, 0.52) 28%, rgba(240, 123, 102, 0.28) 48%, transparent 72%),
-    radial-gradient(circle at 62% 42%, rgba(255, 255, 255, 0.92), transparent 42%);
+    radial-gradient(circle, rgba(12, 112, 181, 0.08) 0%, rgba(141, 197, 232, 0.06) 32%, rgba(240, 123, 102, 0.03) 52%, transparent 74%),
+    radial-gradient(circle at 62% 42%, rgba(255, 255, 255, 0.14), transparent 46%);
   border-radius: 50%;
-  filter: blur(8px);
+  filter: blur(14px);
   opacity: 0;
   transform: translate3d(-50%, -50%, 0);
   transition: opacity 220ms ease;
   mix-blend-mode: normal;
-  box-shadow: 0 0 90px rgba(12, 112, 181, 0.42);
+  box-shadow: 0 0 36px rgba(12, 112, 181, 0.06);
 }
 
 .cursor-cloud.is-active {
