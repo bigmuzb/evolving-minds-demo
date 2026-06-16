@@ -45,7 +45,7 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
   width: 220px;
   height: 220px;
   pointer-events: none;
@@ -87,6 +87,12 @@ a {
   border-bottom: 1px solid rgba(141, 197, 232, 0.28);
   backdrop-filter: blur(18px);
   transition: box-shadow 180ms ease, min-height 180ms ease;
+}
+
+main,
+.site-footer {
+  position: relative;
+  z-index: 2;
 }
 
 .site-header[data-elevated="true"] {
