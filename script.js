@@ -44,7 +44,7 @@ if (cursorCloud && window.matchMedia("(pointer: fine)").matches && !window.match
   function animateCloud() {
     currentX += (targetX - currentX) * 0.12;
     currentY += (targetY - currentY) * 0.12;
-    cursorCloud.style.transform = `translate3d(${currentX - 150}px, ${currentY - 150}px, 0)`;
+    cursorCloud.style.transform = `translate3d(${currentX - 210}px, ${currentY - 210}px, 0)`;
     requestAnimationFrame(animateCloud);
   }
 
